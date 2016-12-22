@@ -18,11 +18,16 @@ namespace CShapLearn_ConsoleApplication_01
         {
             get { return price; }
         }
-
-        public Product(string name, decimal price)
+        readonly int supplierID;
+        public int SupplierID
+        {
+            get { return supplierID; }
+        }
+        public Product(string name, decimal price,int supplierID)
         {
             this.name = name;
             this.price = price;
+            this.supplierID = supplierID;
         }
 
         public static List<Product> GetSampleProduct()
@@ -30,10 +35,10 @@ namespace CShapLearn_ConsoleApplication_01
             //List<Product> list = new List<Product>();
             return new List<Product>
             {
-                new Product(name: "West Side Story", price: 9.99m),
-                new Product(name: "Assassins", price: 14.99m),
-                new Product(name: "Frogs", price: 13.99m),
-                new Product(name: "Sweeney Todd", price: 10.99m)
+                new Product(name: "West Side Story", price: 9.99m,supplierID :1),
+                new Product(name: "Assassins", price: 14.99m,supplierID:2),
+                new Product(name: "Frogs", price: 13.99m,supplierID:3),
+                new Product(name: "Sweeney Todd", price: 10.99m,supplierID:4)
             };
         }
         
