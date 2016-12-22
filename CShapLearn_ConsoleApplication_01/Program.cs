@@ -20,6 +20,7 @@ namespace CShapLearn_ConsoleApplication_01
                 Console.WriteLine(product);
             }
             Console.ReadKey();
+            /////////////
         }
     }
 }
