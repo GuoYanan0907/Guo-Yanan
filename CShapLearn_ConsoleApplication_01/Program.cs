@@ -12,13 +12,14 @@ namespace CShapLearn_ConsoleApplication_01
         {
             List<Product> products = Product.GetSampleProduct();
 
-            products.Sort(delegate (Product x, Product y)//匿名委托
-            { return x.Name.CompareTo(y.Name); }
-            );
-            foreach (Product product in products)
-            {
-                Console.WriteLine(product);
-            }
+            //products.Sort(delegate (Product x, Product y)//匿名委托
+            //{ return x.Name.CompareTo(y.Name); }
+            //);
+            //foreach (Product product in products)
+            //{
+            //    Console.WriteLine(product);
+            //}
+            products.FindAll(delegate (Product p) { return p.Price > 10; }).ForEach(Console.WriteLine); 
             Console.ReadKey();
         }
     }
